@@ -1,0 +1,16 @@
+body {
+  font-family: 'Abhaya Libre', serif;
+}
+
+nav, h1 {
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+nav {
+  background-color: skyblue;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+}
