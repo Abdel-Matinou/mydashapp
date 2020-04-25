@@ -22,7 +22,7 @@ navbar = dbc.NavbarSimple(
     ],
     brand="UTAH ++",
     brand_href="#",
-    color="primary",
+    color="#337ab7",
     dark=True,
 )
 
@@ -83,15 +83,30 @@ third_card = dbc.Card(
 #         ]
 #     )
 # )
-
-
 cards = dbc.Row([dbc.Col(first_card), dbc.Col(second_card), dbc.Col(third_card)])
-
 
 ######---FIRST ROW END
 
+####################
+#### DROPDOWN AND GRAPH
+
+dropdown = html.Div([html.Label('Plateforme'),
+dcc.Dropdown(
+    options=[
+            {'label': 'Tous', 'value': 'df_tickets'},
+            {'label': 'Place', 'value': 'tickets_place'},
+            {'label': 'Mpe', 'value': 'tickets_mpe'}
+        ],
+    value=['df_tickets'],
+    multi=False
+        ),
+        ])
+
+#### DROPDOWN END
+
 app.layout = dbc.Container(children = [
                     html.Div(navbar), welcome, cards,
+                    html.Br(), dropdown
 
 
     # dbc.Row([
